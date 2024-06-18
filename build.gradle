@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.6.4'  // Apply Spring Boot plugin
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+
+}
+sourceCompatibility = '11'
+targetCompatibility = '11'
+group = 'com.pavana.rest.fileprocessing'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web' // Add Spring Boot starter for web applications
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
